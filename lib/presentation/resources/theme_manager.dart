@@ -6,7 +6,13 @@ class AppTheme {
         scaffoldBackgroundColor: Colors.brown.shade200,
         textTheme: const TextTheme(
           bodyLarge: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+            color: Colors.black,
+          ),
+          bodyMedium: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.orange.shade300,
