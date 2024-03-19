@@ -1,5 +1,6 @@
 import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -15,7 +16,7 @@ class WelcomePage extends StatelessWidget {
           SizedBox(
               height: 300,
               child: Image(image: AssetImage('Images/BurgerLogo.jpg'))),
-          SizedBox(height: 70),
+          Gap(70),
           CustomButton()
         ]))));
   }

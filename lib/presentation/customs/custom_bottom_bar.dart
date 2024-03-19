@@ -1,7 +1,8 @@
 import 'package:burger_b_food/presentation/pages/home_page.dart';
+import 'package:burger_b_food/presentation/pages/locations.dart';
 import 'package:burger_b_food/presentation/pages/orders_page.dart';
-import 'package:burger_b_food/presentation/pages/settings_page.dart';
 import 'package:flutter/material.dart';
+
 
 class CustomBottomBar extends StatefulWidget {
   const CustomBottomBar({super.key});
@@ -15,7 +16,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   static final List<Widget> _widgetOptions = <Widget>[
     const HomePage(), //_widgetOptions[0]
     const OrdersPage(),
-    const SettingsPage()
+    const FindNearLocationPage()
   ];
 
   void _onItemTapped(int index) {
@@ -33,8 +34,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
               icon: Icon(Icons.home, size: 30), label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart), label: "Orders"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings_outlined), label: "Settings")
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search")
         ], onTap: _onItemTapped, currentIndex: _selectedIndex));
   }
 }
