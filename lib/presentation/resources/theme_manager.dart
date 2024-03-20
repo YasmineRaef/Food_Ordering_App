@@ -29,6 +29,14 @@ class AppTheme {
             style: ButtonStyle(
                 backgroundColor:
                     MaterialStateProperty.all(Colors.amber.shade900))),
-        appBarTheme: AppBarTheme(backgroundColor: Colors.orange.shade300));
+        appBarTheme: AppBarTheme(backgroundColor: Colors.orange.shade300),
+        inputDecorationTheme: InputDecorationTheme(
+            border: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            filled: true,
+            fillColor: Colors.grey.shade300,
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.orange.shade800),
+                borderRadius: const BorderRadius.all(Radius.circular(20)))));
   }
 }

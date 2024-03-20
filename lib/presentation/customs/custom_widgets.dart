@@ -69,3 +69,16 @@ class CustomCard extends StatelessWidget {
         ]));
   }
 }
+
+class BadgeShop extends StatelessWidget {
+  const BadgeShop({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+      const SizedBox(
+          height: 60, child: Image(image: AssetImage('Images/BurgerLogo.jpg'))),
+      Text("Welcome To Burger B.", style: Theme.of(context).textTheme.bodyLarge)
+    ]);
+  }
+}

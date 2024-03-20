@@ -13,19 +13,26 @@ class OrdersPage extends StatelessWidget {
                     children: <Widget>[
           const Padding(
             padding: EdgeInsets.all(10),
-            child: Text(
-              'View your Orders',
-              textAlign: TextAlign.center,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  'View your Orders',
+                  textAlign: TextAlign.center,
+                ),
+                Icon(Icons.list),
+              ],
             ),
           ),
           for (int i = 0; i < 20; i++) ...[
             Container(
-              height: 50,
+              height: 70,
               color: Colors.amber[600],
               child: const Center(child: Text('Order')),
             ),
             const Divider(
               height: 6,
+              color: Colors.black,
             )
           ]
         ]))));
