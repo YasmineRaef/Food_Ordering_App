@@ -8,16 +8,20 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        body: SafeArea(
-            child: Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-          SizedBox(
-              height: 300,
-              child: Image(image: AssetImage('Images/BurgerLogo.jpg'))),
-          Gap(70),
-          CustomButton()
-        ]))));
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                  height: 300,
+                  child: Image(image: AssetImage('Images/BurgerLogo.jpg'))),
+              Gap(70),
+              CustomButton()
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

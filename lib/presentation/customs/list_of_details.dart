@@ -47,3 +47,10 @@ List<IconData> tabIcon = [
   Icons.timelapse,
   Icons.local_drink_rounded
 ];
+
+List<String> bottomBarLabel = ["Home", "Search", "SignIn"];
+List<Icon> bottomBarIcon = const [
+  Icon(Icons.home, size: 30),
+  Icon(Icons.search),
+  Icon(Icons.person, size: 30)
+];

@@ -28,15 +28,13 @@ Widget giveData(String nameTab) {
   }
   return Column(children: [
     Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-      for (int i = 0; i < 2; i++) ...[
+      for (int i = 0; i < 2; i++)
         CustomCard(imagePath: listPath[i], imageDescription: listDes[i])
-      ]
     ]),
     const Gap(20),
     Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-      for (int i = 2; i < 4; i++) ...[
+      for (int i = 2; i < 4; i++)
         CustomCard(imagePath: listPath[i], imageDescription: listDes[i])
-      ]
     ])
   ]);
 }

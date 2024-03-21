@@ -10,26 +10,24 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-          appBar: AppBar(
-              bottom: const TabBar(tabs: [
+        appBar: AppBar(
+            bottom: TabBar(tabs: [
+              for (int i = 0; i < 3; i++)
                 Tab(
-                    text: 'POPULAR',
-                    icon: Icon(Icons.people, color: Colors.black)),
-                Tab(
-                    text: 'SPECIAL',
-                    icon: Icon(Icons.timelapse, color: Colors.black)),
-                Tab(
-                    text: 'OTHER',
-                    icon: Icon(Icons.local_drink_rounded, color: Colors.black))
-              ]),
-              title: const BadgeShop()),
-          body: const Stack(children: [
+                    text: tabName[i],
+                    icon: Icon(tabIcon[i], color: Colors.black))
+            ]),
+            title: const BadgeShop()),
+        body: const Stack(
+          children: [
             Image(
                 fit: BoxFit.cover,
                 height: double.infinity,
                 image: AssetImage('Images/bg_image.png')),
             TabBarContents()
-          ])),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -39,10 +37,11 @@ class TabBarContents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TabBarView(children: [
-      for (int i = 0; i < 3; i++) ...[
-        CustomCardsView(tabName: tabName[i], tabIcon: tabIcon[i])
-      ]
-    ]);
+    return TabBarView(
+      children: [
+        for (int i = 0; i < 3; i++)
+          CustomCardsView(tabName: tabName[i], tabIcon: tabIcon[i])
+      ],
+    );
   }
 }
