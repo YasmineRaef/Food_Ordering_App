@@ -1,4 +1,3 @@
-import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/customs/list_of_details.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -9,7 +8,6 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const BadgeShop()),
       body: Center(
         child: Container(
           decoration: BoxDecoration(color: Colors.amber.shade400),

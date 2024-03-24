@@ -1,12 +1,12 @@
-import 'package:burger_b_food/presentation/customs/custom_bottom_bar.dart';
+
 import 'package:burger_b_food/presentation/pages/home_page.dart';
 import 'package:burger_b_food/presentation/pages/locations.dart';
 import 'package:burger_b_food/presentation/pages/welcome_page.dart';
 import 'package:burger_b_food/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 
-class Basic extends StatelessWidget {
-  const Basic({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +15,11 @@ class Basic extends StatelessWidget {
       theme: AppTheme.getLightTheme(),
       debugShowCheckedModeBanner: false,
       routes: {
-        'welcome': (context) => const WelcomePage(),
+        'welcome': (context) => WelcomePage(),
         'home': (context) => const HomePage(),
-        'settings': (context) => const FindNearLocationPage(),
-        'bar': (context) => const CustomBottomBar()
+        'settings': (context) => const FindNearLocationPage()
       },
+      
     );
   }
 }

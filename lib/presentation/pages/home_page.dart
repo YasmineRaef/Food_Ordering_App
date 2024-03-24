@@ -11,20 +11,17 @@ class HomePage extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-            bottom: TabBar(tabs: [
-              for (int i = 0; i < 3; i++)
-                Tab(
-                    text: tabName[i],
-                    icon: Icon(tabIcon[i], color: Colors.black))
-            ]),
-            title: const BadgeShop()),
+            title: TabBar(tabs: [
+          for (int i = 0; i < 3; i++)
+            Tab(text: tabName[i], icon: Icon(tabIcon[i], color: Colors.black))
+        ])),
         body: const Stack(
           children: [
             Image(
                 fit: BoxFit.cover,
                 height: double.infinity,
                 image: AssetImage('Images/bg_image.png')),
-            TabBarContents()
+            TabBarContents(),
           ],
         ),
       ),

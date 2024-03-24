@@ -2,24 +2,6 @@ import 'package:burger_b_food/presentation/customs/assigning_data.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-        width: 250,
-        height: 50,
-        child: TextButton(
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, 'bar');
-            },
-            child: Center(
-                child: Text('Welcome 😎',
-                    style: Theme.of(context).textTheme.bodyLarge))));
-  }
-}
-
 class CustomCardsView extends StatelessWidget {
   const CustomCardsView(
       {super.key, required this.tabName, required this.tabIcon});
@@ -39,7 +21,13 @@ class CustomCardsView extends StatelessWidget {
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [Text(tabName), Icon(tabIcon)])),
-      giveData(tabName)
+      giveData(tabName),
+      FloatingActionButton(
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, 'welcome');
+          },
+          backgroundColor: Colors.amber.shade600,
+          child: const Icon(Icons.logout_outlined, size: 32))
     ]);
   }
 }
@@ -71,14 +59,14 @@ class CustomCard extends StatelessWidget {
 }
 
 class BadgeShop extends StatelessWidget {
-  const BadgeShop({super.key});
-
+  const BadgeShop({super.key, required this.name});
+  final String name;
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       const SizedBox(
           height: 60, child: Image(image: AssetImage('Images/BurgerLogo.jpg'))),
-      Text("Welcome To Burger B.", style: Theme.of(context).textTheme.bodyLarge)
+      Text("Welcome $name ", style: Theme.of(context).textTheme.bodyMedium)
     ]);
   }
 }
