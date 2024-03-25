@@ -4,7 +4,6 @@ import 'package:burger_b_food/presentation/pages/home_page.dart';
 import 'package:burger_b_food/presentation/pages/locations.dart';
 import 'package:burger_b_food/presentation/pages/sign_up_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; //for system chrome 'full screen'
 
 class CustomBottomBar extends StatefulWidget {
   const CustomBottomBar({super.key, required this.name});
@@ -25,12 +24,6 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
     setState(() {
       _selectedIndex = index;
     });
-  }
-
-  @override //for entering full-screen mode in whole project after opening..
-  void initState() {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
-    super.initState();
   }
 
   @override

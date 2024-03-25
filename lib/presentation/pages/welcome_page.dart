@@ -1,4 +1,5 @@
 import 'package:burger_b_food/presentation/customs/custom_bottom_bar.dart';
+import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -38,7 +39,8 @@ class WelcomePage extends StatelessWidget {
                     child: TextButton(
                         onPressed: () {
                           if (formField.currentState!.validate()) {
-                           Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) => CustomBottomBar(name: myController.text))));
+                            MyNavigator.goToPage(context,
+                                CustomBottomBar(name: myController.text));
                           }
                         },
                         child: Center(

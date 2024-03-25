@@ -1,4 +1,5 @@
 import 'package:burger_b_food/presentation/customs/assigning_data.dart';
+import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -9,26 +10,32 @@ class CustomCardsView extends StatelessWidget {
   final IconData tabIcon;
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-      Container(
-          width: 250,
-          padding: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-              //theme manager adding....
-              color: Colors.amber.shade300,
-              border: Border.all(),
-              borderRadius: BorderRadius.circular(70)),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [Text(tabName), Icon(tabIcon)])),
-      giveData(tabName),
-      FloatingActionButton(
-          onPressed: () {
-            Navigator.pushReplacementNamed(context, 'welcome');
-          },
-          backgroundColor: Colors.amber.shade600,
-          child: const Icon(Icons.logout_outlined, size: 32))
-    ]);
+    return SingleChildScrollView(
+      child:
+          Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        const Gap(20),
+        Container(
+            width: 250,
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                //theme manager adding....
+                color: Colors.amber.shade300,
+                border: Border.all(),
+                borderRadius: BorderRadius.circular(70)),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [Text(tabName), Icon(tabIcon)])),
+        const Gap(20),
+        giveData(tabName),
+        const Gap(20),
+        FloatingActionButton(
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, BasicRoutes.welcome);
+            },
+            backgroundColor: Colors.amber.shade600,
+            child: const Icon(Icons.logout_outlined, size: 32))
+      ]),
+    );
   }
 }
 
