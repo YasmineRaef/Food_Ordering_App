@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:burger_b_food/presentation/pages/home_page.dart';
 import 'package:burger_b_food/presentation/pages/locations.dart';
 import 'package:burger_b_food/presentation/pages/welcome_page.dart';
+import 'package:flutter/material.dart';
 
 class BasicRoutes {
   static String welcome = 'welcome';
@@ -14,9 +14,9 @@ class BasicRoutes {
   };
 }
 
-extension MyNavigator on MaterialPageRoute {
-   static goToPage(BuildContext context,Widget page) {
-     return Navigator.pushReplacement(
+extension MyNavigator on BuildContext {
+  static goToPage(BuildContext context,Widget page) {
+    return Navigator.pushReplacement(
         context, MaterialPageRoute(builder: ((context) => page)));
   }
 }

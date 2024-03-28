@@ -23,6 +23,7 @@ class WelcomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: TextFormField(
+                    style: Theme.of(context).textTheme.bodySmall,
                     controller: myController,
                     decoration:
                         const InputDecoration(hintText: 'Enter your name'),

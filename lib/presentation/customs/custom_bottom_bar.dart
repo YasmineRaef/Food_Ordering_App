@@ -3,7 +3,10 @@ import 'package:burger_b_food/presentation/customs/list_of_details.dart';
 import 'package:burger_b_food/presentation/pages/home_page.dart';
 import 'package:burger_b_food/presentation/pages/locations.dart';
 import 'package:burger_b_food/presentation/pages/sign_up_screen.dart';
+import 'package:burger_b_food/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
+
+bool iconBool = false; //on toggle t or f mode changes ....
 
 class CustomBottomBar extends StatefulWidget {
   const CustomBottomBar({super.key, required this.name});
@@ -13,6 +16,9 @@ class CustomBottomBar extends StatefulWidget {
 }
 
 class _CustomBottomBarState extends State<CustomBottomBar> {
+  final IconData _iconLight = Icons.wb_sunny;
+  final IconData _iconDark = Icons.nights_stay;
+
   late int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
     const HomePage(), //_widgetOptions[0]
@@ -29,12 +35,44 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title:  BadgeShop(name: widget.name), elevation: 0),
+        appBar: AppBar(
+          elevation: 0,
+          title: BadgeShop(name: widget.name),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  setState(() {
+                    iconBool = !iconBool;
+                  });
+                },
+                icon: Icon(iconBool ? _iconDark : _iconLight))
+          ],
+        ),
         body: Center(child: _widgetOptions[_selectedIndex]),
         bottomNavigationBar: BottomNavigationBar(items: [
           for (int i = 0; i < 3; i++)
             BottomNavigationBarItem(
                 icon: bottomBarIcon[i], label: bottomBarLabel[i]),
         ], onTap: _onItemTapped, currentIndex: _selectedIndex));
+  }
+}
+
+ThemeData checkTheme() {
+  if (iconBool == true) {
+    // case dark is chosen
+    return AppTheme.getDarkTheme();
+  } else {
+    // case light is chosen
+    return AppTheme.getLightTheme();
+  }
+}
+
+bool checkThemeImage() {
+  if (iconBool == true) {
+    // case dark is chosen
+    return true;
+  } else {
+    // case light is chosen
+    return false;
   }
 }

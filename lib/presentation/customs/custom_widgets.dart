@@ -1,4 +1,5 @@
 import 'package:burger_b_food/presentation/customs/assigning_data.dart';
+import 'package:burger_b_food/presentation/customs/custom_bottom_bar.dart';
 import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -19,7 +20,9 @@ class CustomCardsView extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 //theme manager adding....
-                color: Colors.amber.shade300,
+                color: checkThemeImage()
+                    ? Colors.deepOrange.shade500
+                    : Colors.amber.shade300,
                 border: Border.all(),
                 borderRadius: BorderRadius.circular(70)),
             child: Row(
@@ -28,12 +31,16 @@ class CustomCardsView extends StatelessWidget {
         const Gap(20),
         giveData(tabName),
         const Gap(20),
-        FloatingActionButton(
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, BasicRoutes.welcome);
-            },
-            backgroundColor: Colors.amber.shade600,
-            child: const Icon(Icons.logout_outlined, size: 32))
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            FloatingActionButton(
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, BasicRoutes.welcome);
+                },
+                child: const Icon(Icons.logout_outlined, size: 32))
+          ],
+        )
       ]),
     );
   }
@@ -50,7 +57,9 @@ class CustomCard extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
             //theme manager adding....
-            color: Color.fromARGB(130, 238, 162, 48),
+            color: checkThemeImage()
+                ? Color.fromARGB(152, 255, 100, 34)
+                : const Color.fromARGB(130, 238, 162, 48),
             border: Border.all(),
             borderRadius: BorderRadius.circular(20)),
         height: 200,

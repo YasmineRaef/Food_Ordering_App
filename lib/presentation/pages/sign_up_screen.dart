@@ -10,14 +10,19 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          decoration: BoxDecoration(color: Colors.amber.shade400),
+          decoration: BoxDecoration(
+              color: Colors.amber.shade400, border: Border.all(width: 2)),
           height: 400,
           width: 300,
           child: Column(
             children: [
-              const Padding(
-                  padding: EdgeInsets.all(30),
-                  child: Text('Sign-Up to be with us')),
+              Padding(
+                  padding: const EdgeInsets.all(30),
+                  child: Text('Sign-Up to be with us',
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyMedium
+                          ?.copyWith(color: Colors.black))),
               for (int i = 0; i < 2; i++)
                 Padding(
                     padding: const EdgeInsets.all(20),
