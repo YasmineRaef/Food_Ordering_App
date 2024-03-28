@@ -15,7 +15,7 @@ class BasicRoutes {
 }
 
 extension MyNavigator on BuildContext {
-  static goToPage(BuildContext context,Widget page) {
+  static goToPage(BuildContext context, Widget page) {
     return Navigator.pushReplacement(
         context, MaterialPageRoute(builder: ((context) => page)));
   }

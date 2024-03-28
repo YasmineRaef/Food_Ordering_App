@@ -3,7 +3,6 @@ import 'package:burger_b_food/presentation/customs/list_of_details.dart';
 import 'package:burger_b_food/presentation/pages/home_page.dart';
 import 'package:burger_b_food/presentation/pages/locations.dart';
 import 'package:burger_b_food/presentation/pages/sign_up_screen.dart';
-import 'package:burger_b_food/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 
 bool iconBool = false; //on toggle t or f mode changes ....
@@ -57,15 +56,6 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   }
 }
 
-ThemeData checkTheme() {
-  if (iconBool == true) {
-    // case dark is chosen
-    return AppTheme.getDarkTheme();
-  } else {
-    // case light is chosen
-    return AppTheme.getLightTheme();
-  }
-}
 
 bool checkThemeImage() {
   if (iconBool == true) {
