@@ -12,8 +12,8 @@ class SignUpScreen extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               color: Colors.amber.shade400, border: Border.all(width: 2)),
-          height: 400,
-          width: 300,
+          height: MediaQuery.of(context).size.height * 0.6,
+          width: MediaQuery.of(context).size.width * 0.5,
           child: Column(
             children: [
               Padding(

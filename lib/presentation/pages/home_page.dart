@@ -19,6 +19,7 @@ class HomePage extends StatelessWidget {
           children: [
             Image(
                 fit: BoxFit.cover,
+                repeat: ImageRepeat.repeat,
                 height: double.infinity,
                 image: AssetImage('Images/bg_image.png')),
             TabBarContents(),

@@ -56,7 +56,6 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   }
 }
 
-
 bool checkThemeImage() {
   if (iconBool == true) {
     // case dark is chosen

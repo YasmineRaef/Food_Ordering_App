@@ -16,7 +16,7 @@ class CustomCardsView extends StatelessWidget {
           Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         const Gap(20),
         Container(
-            width: 250,
+            width: MediaQuery.of(context).size.width * 0.5,
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 //theme manager adding....
@@ -58,12 +58,12 @@ class CustomCard extends StatelessWidget {
         decoration: BoxDecoration(
             //theme manager adding....
             color: checkThemeImage()
-                ? Color.fromARGB(152, 255, 100, 34)
+                ? const Color.fromARGB(152, 255, 100, 34)
                 : const Color.fromARGB(130, 238, 162, 48),
             border: Border.all(),
             borderRadius: BorderRadius.circular(20)),
-        height: 200,
-        width: 190,
+        height: MediaQuery.of(context).size.height * 0.25,
+        width: MediaQuery.of(context).size.height * 0.23,
         child: Column(children: [
           SizedBox(height: 100, child: Image(image: AssetImage(imagePath))),
           const Gap(10),
@@ -80,8 +80,9 @@ class BadgeShop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-      const SizedBox(
-          height: 60, child: Image(image: AssetImage('Images/BurgerLogo.jpg'))),
+      SizedBox(
+          height: MediaQuery.of(context).size.height * 0.09,
+          child: const Image(image: AssetImage('Images/BurgerLogo.jpg'))),
       Text("Welcome $name ", style: Theme.of(context).textTheme.bodyMedium)
     ]);
   }
