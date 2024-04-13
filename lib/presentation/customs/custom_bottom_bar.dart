@@ -34,19 +34,16 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          title: BadgeShop(name: widget.name),
-          actions: [
-            IconButton(
-                onPressed: () {
-                  setState(() {
-                    iconBool = !iconBool;
-                  });
-                },
-                icon: Icon(iconBool ? _iconDark : _iconLight))
-          ],
-        ),
+        appBar:
+            AppBar(elevation: 0, title: BadgeShop(name: widget.name), actions: [
+          IconButton(
+              onPressed: () {
+                setState(() {
+                  iconBool = !iconBool;
+                });
+              },
+              icon: Icon(iconBool ? _iconDark : _iconLight))
+        ]),
         body: Center(child: _widgetOptions[_selectedIndex]),
         bottomNavigationBar: BottomNavigationBar(items: [
           for (int i = 0; i < 3; i++)

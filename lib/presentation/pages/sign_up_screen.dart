@@ -1,3 +1,4 @@
+import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/customs/list_of_details.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -12,8 +13,8 @@ class SignUpScreen extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               color: Colors.amber.shade400, border: Border.all(width: 2)),
-          height: MediaQuery.of(context).size.height * 0.6,
-          width: MediaQuery.of(context).size.width * 0.5,
+          height: contextHeight(context, 0.6),
+          width: contextWidth(context, 0.7),
           child: Column(
             children: [
               Padding(
@@ -23,12 +24,13 @@ class SignUpScreen extends StatelessWidget {
                           .textTheme
                           .bodyMedium
                           ?.copyWith(color: Colors.black))),
+              Gap(contextHeight(context, 0.01)),
               for (int i = 0; i < 2; i++)
                 Padding(
                     padding: const EdgeInsets.all(20),
                     child: TextField(
                         decoration: InputDecoration(hintText: hintLabels[i]))),
-              const Gap(20),
+              Gap(contextHeight(context, 0.01)),
               TextButton(
                   onPressed: () {},
                   style: const ButtonStyle(

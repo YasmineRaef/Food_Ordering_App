@@ -14,9 +14,9 @@ class CustomCardsView extends StatelessWidget {
     return SingleChildScrollView(
       child:
           Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        const Gap(20),
+        Gap(contextHeight(context, 0.02)),
         Container(
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: contextWidth(context, 0.5),
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 //theme manager adding....
@@ -28,17 +28,26 @@ class CustomCardsView extends StatelessWidget {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [Text(tabName), Icon(tabIcon)])),
-        const Gap(20),
-        giveData(tabName),
-        const Gap(20),
+        Gap(contextHeight(context, 0.02)),
+        giveData(tabName, context),
+        Gap(contextHeight(context, 0.01)),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            FloatingActionButton(
-                onPressed: () {
-                  Navigator.pushReplacementNamed(context, BasicRoutes.welcome);
-                },
-                child: const Icon(Icons.logout_outlined, size: 32))
+            Container(
+              height: contextHeight(context, 0.1),
+              width: contextWidth(context, 0.1),
+              child: FittedBox(
+                child: FloatingActionButton(
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                        context, BasicRoutes.welcome);
+                  },
+                  child: Icon(Icons.logout_outlined,
+                      size: contextWidth(context, 0.05)),
+                ),
+              ),
+            )
           ],
         )
       ]),
@@ -62,10 +71,12 @@ class CustomCard extends StatelessWidget {
                 : const Color.fromARGB(130, 238, 162, 48),
             border: Border.all(),
             borderRadius: BorderRadius.circular(20)),
-        height: MediaQuery.of(context).size.height * 0.25,
-        width: MediaQuery.of(context).size.height * 0.23,
+        height: contextHeight(context, 0.22),
+        width: contextWidth(context, 0.4),
         child: Column(children: [
-          SizedBox(height: 100, child: Image(image: AssetImage(imagePath))),
+          SizedBox(
+              height: contextHeight(context, 0.1),
+              child: Image(image: AssetImage(imagePath))),
           const Gap(10),
           Text(imageDescription,
               textAlign: TextAlign.center,
@@ -81,9 +92,17 @@ class BadgeShop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       SizedBox(
-          height: MediaQuery.of(context).size.height * 0.09,
+          height: contextHeight(context, 0.06),
           child: const Image(image: AssetImage('Images/BurgerLogo.jpg'))),
       Text("Welcome $name ", style: Theme.of(context).textTheme.bodyMedium)
     ]);
   }
+}
+
+double contextHeight(BuildContext context, double num) {
+  return (MediaQuery.of(context).size.height * num);
+}
+
+double contextWidth(BuildContext context, double num) {
+  return (MediaQuery.of(context).size.width * num);
 }

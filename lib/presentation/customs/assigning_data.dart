@@ -13,7 +13,7 @@ int tabChecker(String tabName) {
   }
 }
 
-Widget giveData(String nameTab) {
+Widget giveData(String nameTab, BuildContext context) {
   List listPath;
   List listDes;
   if (tabChecker(nameTab) == 1) {
@@ -31,7 +31,7 @@ Widget giveData(String nameTab) {
       for (int i = 0; i < 2; i++)
         CustomCard(imagePath: listPath[i], imageDescription: listDes[i])
     ]),
-    const Gap(20),
+    Gap(contextHeight(context, 0.02)),
     Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       for (int i = 2; i < 4; i++)
         CustomCard(imagePath: listPath[i], imageDescription: listDes[i])

@@ -1,4 +1,5 @@
 import 'package:burger_b_food/presentation/customs/custom_bottom_bar.dart';
+import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -35,8 +36,8 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                    width: 100,
-                    height: 40,
+                    width: contextWidth(context, 0.22),
+                    height: contextHeight(context, 0.04),
                     child: TextButton(
                         onPressed: () {
                           if (formField.currentState!.validate()) {
