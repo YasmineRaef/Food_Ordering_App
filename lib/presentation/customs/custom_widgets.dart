@@ -1,3 +1,4 @@
+import 'package:burger_b_food/generated/l10n.dart';
 import 'package:burger_b_food/presentation/customs/assigning_data.dart';
 import 'package:burger_b_food/presentation/customs/custom_bottom_bar.dart';
 import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
@@ -94,7 +95,8 @@ class BadgeShop extends StatelessWidget {
       SizedBox(
           height: contextHeight(context, 0.06),
           child: const Image(image: AssetImage('Images/BurgerLogo.jpg'))),
-      Text("Welcome $name ", style: Theme.of(context).textTheme.bodyMedium)
+      Text((S.of(context).badgeShop + name),
+          style: Theme.of(context).textTheme.bodyMedium)
     ]);
   }
 }

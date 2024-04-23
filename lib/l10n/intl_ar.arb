@@ -1,0 +1,12 @@
+{
+  "hintNameText": "ادخل اسمك",
+  "errorMessage": "من فضلك ادخل اسمك الاول",
+  "welcomeButton": "دخول 😎",
+  "badgeShop": "مرحبا ",
+  "locationsQuestion": "اوجد اقرب فرع لك",
+  "hintLocationText": "بحث",
+  "signingUpText": "قم بالتسجيل وانضم الينا",
+  "signUpButton": "التسجيل",
+  "signUpName": "الاسم",
+  "signUpNum": "رقم التليفون"
+}

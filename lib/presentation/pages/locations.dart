@@ -1,3 +1,4 @@
+import 'package:burger_b_food/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -10,7 +11,7 @@ class FindNearLocationPage extends StatelessWidget {
       body: Column(
         children: [
           const Gap(80),
-          const Text('Find our nearest branch '),
+          Text(S.of(context).locationsQuestion),
           const Gap(30),
           const Padding(
               padding: EdgeInsets.all(12),
@@ -25,7 +26,7 @@ class FindNearLocationPage extends StatelessWidget {
                       MaterialStatePropertyAll(Colors.orange.shade300)),
               onPressed: () {},
               child:
-                  Text('Search', style: Theme.of(context).textTheme.bodySmall))
+                  Text(S.of(context).hintLocationText, style: Theme.of(context).textTheme.bodySmall))
         ],
       ),
     );

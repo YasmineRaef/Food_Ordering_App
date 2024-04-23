@@ -1,3 +1,4 @@
+import 'package:burger_b_food/generated/l10n.dart';
 import 'package:burger_b_food/presentation/customs/custom_bottom_bar.dart';
 import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
@@ -27,17 +28,17 @@ class WelcomePage extends StatelessWidget {
                     style: Theme.of(context).textTheme.bodySmall,
                     controller: myController,
                     decoration:
-                        const InputDecoration(hintText: 'Enter your name'),
+                        InputDecoration(hintText: S.of(context).hintNameText),
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return 'Please enter your first name';
+                        return S.of(context).errorMessage;
                       }
                     },
                   ),
                 ),
                 SizedBox(
-                    width: contextWidth(context, 0.22),
-                    height: contextHeight(context, 0.04),
+                    width: contextWidth(context, 0.24),
+                    height: contextHeight(context, 0.05),
                     child: TextButton(
                         onPressed: () {
                           if (formField.currentState!.validate()) {
@@ -46,9 +47,11 @@ class WelcomePage extends StatelessWidget {
                           }
                         },
                         child: Center(
-                            child: Text('Enter 😎',
+                            child: Text(S.of(context).welcomeButton,
                                 style:
-                                    Theme.of(context).textTheme.bodyMedium))))
+                                    Theme.of(context).textTheme.bodyMedium)))),
+                const Gap(20),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.abc))
               ],
             ),
           ),

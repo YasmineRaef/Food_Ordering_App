@@ -1,3 +1,4 @@
+import 'package:burger_b_food/generated/l10n.dart';
 import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/customs/list_of_details.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class SignUpScreen extends StatelessWidget {
             children: [
               Padding(
                   padding: const EdgeInsets.all(30),
-                  child: Text('Sign-Up to be with us',
+                  child: Text(S.of(context).signingUpText,
                       style: Theme.of(context)
                           .textTheme
                           .bodyMedium
@@ -35,7 +36,7 @@ class SignUpScreen extends StatelessWidget {
                   onPressed: () {},
                   style: const ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll(Colors.grey)),
-                  child: Text('Sign-Up',
+                  child: Text(S.of(context).signUpButton,
                       style: Theme.of(context).textTheme.bodySmall))
             ],
           ),
