@@ -1,8 +1,10 @@
+import 'package:burger_b_food/app/app.dart';
 import 'package:burger_b_food/generated/l10n.dart';
 import 'package:burger_b_food/presentation/customs/custom_bottom_bar.dart';
 import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:gap/gap.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -49,9 +51,28 @@ class WelcomePage extends StatelessWidget {
                         child: Center(
                             child: Text(S.of(context).welcomeButton,
                                 style:
-                                    Theme.of(context).textTheme.bodyMedium)))),
+                                    Theme.of(context).textTheme.bodySmall)))),
                 const Gap(20),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.abc))
+                Text(S.of(context).languageButton),
+                const Gap(20),
+                IconButton(
+                    onPressed: () {
+                      if (arabicChecker() == true) {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const App(projectLang: "en")));
+                      } else if (arabicChecker() == false) {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const App(projectLang: "ar")));
+                      }
+                    },
+                    hoverColor: Colors.deepOrange.shade400,
+                    icon: const Icon(Icons.abc, size: 36))
               ],
             ),
           ),
@@ -59,4 +80,8 @@ class WelcomePage extends StatelessWidget {
       ),
     );
   }
+}
+
+bool arabicChecker() {
+  return (Intl.getCurrentLocale() == "ar");
 }

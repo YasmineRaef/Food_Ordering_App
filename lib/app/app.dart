@@ -7,8 +7,9 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  const App({super.key, required this.projectLang});
 
+  final String projectLang;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +21,7 @@ class App extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       useInheritedMediaQuery: true,
-      locale: const Locale("ar"),
+      locale:  Locale(projectLang),
       builder: DevicePreview.appBuilder,
       initialRoute: BasicRoutes.welcome,
       theme: AppTheme.getLightTheme(),

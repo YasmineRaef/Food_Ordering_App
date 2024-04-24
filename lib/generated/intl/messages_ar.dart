@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل اسمك الاول"),
         "hintLocationText": MessageLookupByLibrary.simpleMessage("بحث"),
         "hintNameText": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
+        "languageButton": MessageLookupByLibrary.simpleMessage(
+            " للتغيير للانجليزيه اضغط هنا 👇"),
         "locationsQuestion":
             MessageLookupByLibrary.simpleMessage("اوجد اقرب فرع لك"),
         "signUpButton": MessageLookupByLibrary.simpleMessage("التسجيل"),
@@ -34,6 +36,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "signUpNum": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
         "signingUpText":
             MessageLookupByLibrary.simpleMessage("قم بالتسجيل وانضم الينا"),
-        "welcomeButton": MessageLookupByLibrary.simpleMessage("دخول 😎")
+        "welcomeButton": MessageLookupByLibrary.simpleMessage("دخول")
       };
 }

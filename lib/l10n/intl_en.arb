@@ -1,12 +1,17 @@
 {
   "hintNameText": "Enter your name",
   "errorMessage": "Please enter your first name",
-  "welcomeButton": "Enter 😎",
+  "welcomeButton": "Enter",
+  "languageButton": "To change to Arabic press here 👇",
   "badgeShop": "Welcome ",
   "locationsQuestion": "Find our nearest branch",
   "hintLocationText": "Search",
   "signingUpText": "Sign-Up to be with us",
   "signUpButton": "Sign-Up",
   "signUpName": "Name",
-  "signUpNum": "Telephone Number"
+  "signUpNum": "Telephone Number",
+  "tabName1":"POPULAR",
+  "tabName2":"SPECIAL",
+  "tabName3":"OTHER"
 }
+

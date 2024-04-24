@@ -6,7 +6,7 @@ import 'package:flutter/services.dart'; //for system chrome 'full screen'
 void main() {
   runApp(DevicePreview(
     enabled: true,
-    builder: (context) => const App(),
+    builder: (context) => const App(projectLang: "en"),
   ));
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
       overlays: []); //full screen

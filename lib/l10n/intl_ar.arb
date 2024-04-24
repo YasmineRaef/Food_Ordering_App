@@ -1,7 +1,8 @@
 {
   "hintNameText": "ادخل اسمك",
   "errorMessage": "من فضلك ادخل اسمك الاول",
-  "welcomeButton": "دخول 😎",
+  "welcomeButton": "دخول",
+  "languageButton": " للتغيير للانجليزيه اضغط هنا 👇",
   "badgeShop": "مرحبا ",
   "locationsQuestion": "اوجد اقرب فرع لك",
   "hintLocationText": "بحث",
