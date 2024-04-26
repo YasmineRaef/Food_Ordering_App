@@ -1,7 +1,7 @@
 import 'package:burger_b_food/generated/l10n.dart';
 import 'package:burger_b_food/presentation/customs/assigning_data.dart';
-import 'package:burger_b_food/presentation/customs/custom_bottom_bar.dart';
 import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
+import 'package:burger_b_food/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -21,8 +21,8 @@ class CustomCardsView extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 //theme manager adding....
-                color: checkThemeImage()
-                    ? Colors.deepOrange.shade500
+                color: AppTheme.themeMode == ThemeMode.dark
+                    ? Colors.orange.shade700
                     : Colors.amber.shade300,
                 border: Border.all(),
                 borderRadius: BorderRadius.circular(70)),
@@ -45,7 +45,7 @@ class CustomCardsView extends StatelessWidget {
                         context, BasicRoutes.welcome);
                   },
                   child: Icon(Icons.logout_outlined,
-                      size: contextWidth(context, 0.05)),
+                      size: contextWidth(context, 0.07)),
                 ),
               ),
             )
@@ -67,8 +67,8 @@ class CustomCard extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
             //theme manager adding....
-            color: checkThemeImage()
-                ? const Color.fromARGB(152, 255, 100, 34)
+            color: AppTheme.themeMode == ThemeMode.dark
+                ? const Color.fromARGB(225, 38, 50, 56)
                 : const Color.fromARGB(130, 238, 162, 48),
             border: Border.all(),
             borderRadius: BorderRadius.circular(20)),

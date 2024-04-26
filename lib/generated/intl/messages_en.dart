@@ -36,9 +36,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "signUpNum": MessageLookupByLibrary.simpleMessage("Telephone Number"),
         "signingUpText":
             MessageLookupByLibrary.simpleMessage("Sign-Up to be with us"),
-        "tabName1": MessageLookupByLibrary.simpleMessage("POPULAR"),
-        "tabName2": MessageLookupByLibrary.simpleMessage("SPECIAL"),
-        "tabName3": MessageLookupByLibrary.simpleMessage("OTHER"),
         "welcomeButton": MessageLookupByLibrary.simpleMessage("Enter")
       };
 }

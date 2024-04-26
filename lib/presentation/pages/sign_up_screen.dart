@@ -13,7 +13,8 @@ class SignUpScreen extends StatelessWidget {
       body: Center(
         child: Container(
           decoration: BoxDecoration(
-              color: Colors.amber.shade400, border: Border.all(width: 2)),
+              color: Colors.amber.shade400,
+              border: Border.all(width: 2, color: Colors.white)),
           height: contextHeight(context, 0.6),
           width: contextWidth(context, 0.7),
           child: Column(

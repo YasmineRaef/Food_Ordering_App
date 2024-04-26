@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AppTheme {
+  static ThemeMode themeMode = ThemeMode.light;
   static ThemeData getLightTheme() {
     return ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 228, 205, 198),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 228, 205, 198),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: Colors.amber.shade600,
         ),
@@ -45,10 +47,10 @@ class AppTheme {
 
   static ThemeData getDarkTheme() {
     return ThemeData(
-        scaffoldBackgroundColor: Colors.brown,
+        scaffoldBackgroundColor: const Color.fromARGB(225, 38, 50, 56),
         brightness: Brightness.dark,
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Colors.deepOrange.shade500,
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: Color.fromARGB(255, 255, 152, 0),
         ),
         textTheme: const TextTheme(
             bodyLarge: TextStyle(
@@ -57,9 +59,9 @@ class AppTheme {
               color: Colors.white,
             ),
             bodyMedium: TextStyle(color: Colors.white, fontSize: 20),
-            bodySmall: TextStyle(fontSize: 16, color: Colors.black)),
+            bodySmall: TextStyle(fontSize: 16, color: Colors.white)),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Colors.deepOrange.shade500,
+          backgroundColor: Colors.orange.shade700,
           elevation: 10,
           showSelectedLabels: false,
           showUnselectedLabels: false,
@@ -70,16 +72,19 @@ class AppTheme {
         textButtonTheme: TextButtonThemeData(
             style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(Colors.deepOrange.shade800))),
-        appBarTheme: AppBarTheme(backgroundColor: Colors.deepOrange.shade500),
+                    MaterialStateProperty.all(Colors.orange.shade500))),
+        appBarTheme: AppBarTheme(backgroundColor: Colors.orange.shade700),
         inputDecorationTheme: InputDecorationTheme(
-            hintStyle: const TextStyle(color: Colors.white),
+            hintStyle: const TextStyle(color: Colors.black),
             border: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20))),
             filled: true,
-            fillColor: Colors.blueGrey.shade600,
+            fillColor: Colors.orange.shade500,
             focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey.shade600),
                 borderRadius: const BorderRadius.all(Radius.circular(20)))));
   }
+
+  static void changeThemeMode() => Get.changeThemeMode(themeMode =
+      themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light);
 }

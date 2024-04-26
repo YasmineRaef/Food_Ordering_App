@@ -6,6 +6,7 @@ List<String> burgerDataPthSpecial = [
   'Images/special3.png',
   'Images/special4.png'
 ];
+
 List<String> burgerDataDesSpecial = [
   'BurgerB Bacon: Two Beef burgers with onion,tomatoes and tasty bacon 15\$',
   'KIDS MEAL: a small cheeseburger with french fries and soft drink 5\$',
@@ -19,6 +20,7 @@ List<String> burgerDataPth = [
   'Images/Burger3image.jpeg',
   'Images/Burger4image.jpeg'
 ];
+
 List<String> burgerDataDes = [
   'BurgerB Classic: Two Beef burgers with melted cheese and onion rings 10\$',
   'CHICKEN CRISPY: piece of chicken with mayo, lettuce and crispy onion 6\$',
@@ -32,6 +34,7 @@ List<String> drinksPth = [
   'Images/smoothiePic.jpeg',
   'Images/icePic.jpeg'
 ];
+
 List<String> drinksDes = [
   'COFFEE: Try out our delicious coffee  3\$',
   'SOFT DRINKS: All types of soft drinks all in one place 2\$',
@@ -42,6 +45,7 @@ List<String> drinksDes = [
 List<String> hintLabels = ['Name', 'Telephone Number'];
 
 List<String> tabName = ['POPULAR', 'SPECIAL', 'OTHER'];
+
 List<IconData> tabIcon = [
   Icons.people,
   Icons.timelapse,
@@ -49,6 +53,7 @@ List<IconData> tabIcon = [
 ];
 
 List<String> bottomBarLabel = ["Home", "Search", "SignIn"];
+
 List<Icon> bottomBarIcon = const [
   Icon(Icons.home, size: 30),
   Icon(Icons.search),

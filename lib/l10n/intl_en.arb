@@ -9,9 +9,5 @@
   "signingUpText": "Sign-Up to be with us",
   "signUpButton": "Sign-Up",
   "signUpName": "Name",
-  "signUpNum": "Telephone Number",
-  "tabName1":"POPULAR",
-  "tabName2":"SPECIAL",
-  "tabName3":"OTHER"
+  "signUpNum": "Telephone Number"
 }
-

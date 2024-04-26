@@ -1,5 +1,6 @@
 import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/customs/list_of_details.dart';
+import 'package:burger_b_food/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,14 +16,16 @@ class HomePage extends StatelessWidget {
           for (int i = 0; i < 3; i++)
             Tab(text: tabName[i], icon: Icon(tabIcon[i], color: Colors.black))
         ])),
-        body: const Stack(
+        body:  Stack(
           children: [
             Image(
                 fit: BoxFit.cover,
                 repeat: ImageRepeat.repeat,
                 height: double.infinity,
-                image: AssetImage('Images/bg_image.png')),
-            TabBarContents(),
+                image: AppTheme.themeMode == ThemeMode.light
+                    ? const AssetImage('Images/bg_image.png')
+                    : const AssetImage('Images/bg_imagedark.jpeg')),
+            const TabBarContents(),
           ],
         ),
       ),

@@ -159,36 +159,6 @@ class S {
       args: [],
     );
   }
-
-  /// `POPULAR`
-  String get tabName1 {
-    return Intl.message(
-      'POPULAR',
-      name: 'tabName1',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `SPECIAL`
-  String get tabName2 {
-    return Intl.message(
-      'SPECIAL',
-      name: 'tabName2',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `OTHER`
-  String get tabName3 {
-    return Intl.message(
-      'OTHER',
-      name: 'tabName3',
-      desc: '',
-      args: [],
-    );
-  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
