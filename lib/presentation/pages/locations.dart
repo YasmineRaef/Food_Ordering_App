@@ -1,4 +1,4 @@
-import 'package:burger_b_food/generated/l10n.dart';
+import 'package:burger_b_food/app/app_localizations.dart';
 import 'package:burger_b_food/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -12,7 +12,7 @@ class FindNearLocationPage extends StatelessWidget {
       body: Column(
         children: [
           const Gap(80),
-          Text(S.of(context).locationsQuestion),
+          Text("locationText".translateS(context)),
           const Gap(30),
           const Padding(
               padding: EdgeInsets.all(12),
@@ -28,7 +28,7 @@ class FindNearLocationPage extends StatelessWidget {
                           ? Colors.orange.shade300
                           : Colors.orange.shade700)),
               onPressed: () {},
-              child: Text(S.of(context).hintLocationText,
+              child: Text("locationBtn".translateS(context),
                   style: Theme.of(context).textTheme.bodySmall))
         ],
       ),

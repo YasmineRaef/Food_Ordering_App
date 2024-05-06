@@ -1,0 +1,13 @@
+{
+  "welcomeQues": "ادخل اسمك",
+  "welcomeErrorMsg": "برجاء ادخال اسمك",
+  "welcomeButton": "دخول",
+  "translatingMsg": "للتغيير للعربيه اضغط هنا",
+  "greetings": " مرحبا ",
+  "locationText": "ابحث عن اقرب فرع اليك",
+  "locationBtn": "بحث",
+  "signUpTxt":"سجل هنا وانضم الينا",
+  "signUpField1":"الاسم",
+  "signUpField2":"رقم الهاتف",
+  "signUpButton":"تسحيل الدخول"
+}

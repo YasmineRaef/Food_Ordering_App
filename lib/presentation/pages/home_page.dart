@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
           for (int i = 0; i < 3; i++)
             Tab(text: tabName[i], icon: Icon(tabIcon[i], color: Colors.black))
         ])),
-        body:  Stack(
+        body: Stack(
           children: [
             Image(
                 fit: BoxFit.cover,

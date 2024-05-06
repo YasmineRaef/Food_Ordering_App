@@ -1,0 +1,13 @@
+{
+  "welcomeQues": "Enter your name",
+  "welcomeErrorMsg": "Please enter your first name",
+  "welcomeButton": "Enter",
+  "translatingMsg": "To change to Arabic press here",
+  "greetings": "Welcome",
+  "locationText": "Find our nearest branch",
+  "locationBtn": "Search",
+  "signUpTxt": "Sign-Up to be with us",
+  "signUpField1": "Name",
+  "signUpField2": "Telephone Number",
+  "signUpButton": "Sign-Up"
+}

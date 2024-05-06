@@ -17,7 +17,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   gap: ^3.0.1
   get: ^4.6.6
-  device_preview: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -30,6 +29,5 @@ flutter:
 
   assets:
     - Images/
-
-flutter_intl:
-  enabled: true
+    - assets/lang/en.json
+    - assets/lang/ar.json

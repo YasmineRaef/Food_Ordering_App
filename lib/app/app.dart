@@ -1,9 +1,9 @@
-import 'package:burger_b_food/generated/l10n.dart';
+import 'package:burger_b_food/app/app_localizations.dart';
 import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
 import 'package:burger_b_food/presentation/resources/theme_manager.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 class App extends StatelessWidget {
@@ -13,16 +13,22 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      supportedLocales: const [Locale('en'), Locale('ar')],
       localizationsDelegates: const [
-        S.delegate,
+        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate
       ],
-      supportedLocales: S.delegate.supportedLocales,
-      useInheritedMediaQuery: true,
-      locale:  Locale(projectLang),
-      builder: DevicePreview.appBuilder,
+      localeResolutionCallback: (deviceLocale, supportedLocales) {
+        for (var locale in supportedLocales) {
+          if (deviceLocale != null &&
+              deviceLocale.languageCode == locale.languageCode) {
+            return deviceLocale;
+          }
+        }
+        return supportedLocales.first;
+      },
       initialRoute: BasicRoutes.welcome,
       theme: AppTheme.getLightTheme(),
       darkTheme: AppTheme.getDarkTheme(),
