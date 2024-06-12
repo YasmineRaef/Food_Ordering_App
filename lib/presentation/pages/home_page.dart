@@ -1,3 +1,4 @@
+import 'package:burger_b_food/app/app_localizations.dart';
 import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/customs/list_of_details.dart';
 import 'package:burger_b_food/presentation/resources/theme_manager.dart';
@@ -13,8 +14,10 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
             title: TabBar(tabs: [
-          for (int i = 0; i < 3; i++)
-            Tab(text: tabName[i], icon: Icon(tabIcon[i], color: Colors.black))
+          for (int i = 0; i < tabIcon.length; i++)
+            Tab(
+                text: "tabName$i".translateS(context),
+                icon: Icon(tabIcon[i], color: Colors.black))
         ])),
         body: Stack(
           children: [
@@ -40,8 +43,9 @@ class TabBarContents extends StatelessWidget {
   Widget build(BuildContext context) {
     return TabBarView(
       children: [
-        for (int i = 0; i < 3; i++)
-          CustomCardsView(tabName: tabName[i], tabIcon: tabIcon[i])
+        for (int i = 0; i < tabIcon.length; i++)
+          CustomCardsView(
+              tabName: "tabName$i".translateS(context), tabIcon: tabIcon[i])
       ],
     );
   }

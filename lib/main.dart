@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; //for system chrome 'full screen'
 
 void main() {
-  runApp(const App(projectLang: "en"));
+  runApp(const App());
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
       overlays: []); //full screen
 }

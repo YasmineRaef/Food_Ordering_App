@@ -8,7 +8,7 @@ class BasicRoutes {
   static String home = 'home';
   static String settings = 'settings';
   static Map<String, Widget Function(BuildContext)> myRoutes = {
-    welcome: (context) => WelcomePage(),
+    welcome: (context) => WelcomePage(myFunction: () {}),
     home: (context) => const HomePage(),
     settings: (context) => const FindNearLocationPage()
   };

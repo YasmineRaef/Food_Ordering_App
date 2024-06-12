@@ -5,10 +5,18 @@ import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart'
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class WelcomePage extends StatelessWidget {
-  WelcomePage({super.key});
+class WelcomePage extends StatefulWidget {
+  const WelcomePage({super.key, required this.myFunction});
+  final void Function() myFunction;
+  @override
+  State<WelcomePage> createState() => _WelcomePageState();
+}
+
+class _WelcomePageState extends State<WelcomePage> {
   final TextEditingController myController = TextEditingController();
+
   final formField = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +62,7 @@ class WelcomePage extends StatelessWidget {
                 Text("translatingMsg".translateS(context)),
                 const Gap(20),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: widget.myFunction,
                     hoverColor: Colors.deepOrange.shade400,
                     icon: const Icon(Icons.abc, size: 36))
               ],

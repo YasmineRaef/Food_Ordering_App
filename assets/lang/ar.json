@@ -6,8 +6,27 @@
   "greetings": " مرحبا ",
   "locationText": "ابحث عن اقرب فرع اليك",
   "locationBtn": "بحث",
-  "signUpTxt":"سجل هنا وانضم الينا",
-  "signUpField1":"الاسم",
-  "signUpField2":"رقم الهاتف",
-  "signUpButton":"تسحيل الدخول"
+  "signUpTxt": "سجل هنا وانضم الينا",
+  "signUpField1": "الاسم",
+  "signUpField2": "رقم الهاتف",
+  "signUpButton": "تسحيل الدخول",
+
+  "BurgerDataDes0": "BurgerB Classic: طبقتين من البرجر البقري مع جبنة مذابة وحلقات بصل بـ 10 ",
+  "BurgerDataDes1": "CHICKEN CRISPY: قطعة دجاج مع مايونيز وخس وبصل مقرمش بـ 6 ",
+  "BurgerDataDes2": "CHICKEN WRAP: دجاجنا الخاص ملفوف مع سلطة في خبز التورتيلا بـ 7 ",
+  "BurgerDataDes3": "MEAT TACCO: لحم مقلي مع طماطم وبصل مع رغوة حارة بـ 12 ",
+
+  "BurgerDataDesSpecial0": "BurgerB Bacon: طبقتين من البرجر البقري مع بصل وطماطم ولحم بيكون شهي بـ 15 ",
+  "BurgerDataDesSpecial1": "KIDS MEAL: برجر جبنة صغير مع بطاطس مقلية ومشروب غازي بـ 5 ",
+  "BurgerDataDesSpecial2": "FLAMING MEAT: برجر بقري مع قطعة دجاج مشوي حار بـ 9",
+  "BurgerDataDesSpecial3": "DOUBLE MEAT BEEF: طبقتين من اللحم البقري مع دجاج وخس بـ 10",
+
+  "drinksDes0": "COFFEE: جرب قهوتنا اللذيذة بـ 3",
+  "drinksDes1": "SOFT DRINKS: جميع أنواع المشروبات الغازية في مكان واحد بـ 2",
+  "drinksDes2": "SMOOTHIE:  جميع نكهات السموذي، اختر ما تريد بـ 4",
+  "drinksDes3": "ICE-CREAM: جرب نكهات الآيس كريم المصنوعة في المنزل بـ 5",
+
+  "tabName0": "شائع",
+  "tabName1": "مميز",
+  "tabName2": "اخري"
 }

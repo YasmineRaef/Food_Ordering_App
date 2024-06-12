@@ -31,8 +31,7 @@ class SignUpScreen extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.all(20),
                     child: TextField(
-                        decoration:
-                            InputDecoration(hintText: hintLabels[i]))),
+                        decoration: InputDecoration(hintText: hintLabels[i]))),
               Gap(contextHeight(context, 0.01)),
               TextButton(
                   onPressed: () {},

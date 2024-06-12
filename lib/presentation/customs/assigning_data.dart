@@ -1,3 +1,4 @@
+import 'package:burger_b_food/app/app_localizations.dart';
 import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/customs/list_of_details.dart';
 import 'package:flutter/material.dart';
@@ -16,15 +17,33 @@ int tabChecker(String tabName) {
 Widget giveData(String nameTab, BuildContext context) {
   List listPath;
   List listDes;
+  List ListBurgerData = [
+    "BurgerDataDes0".translateS(context),
+    "BurgerDataDes1".translateS(context),
+    "BurgerDataDes2".translateS(context),
+    "BurgerDataDes3".translateS(context),
+  ];
+  List BurgerDataDesSpecial = [
+    "BurgerDataDesSpecial0".translateS(context),
+    "BurgerDataDesSpecial1".translateS(context),
+    "BurgerDataDesSpecial2".translateS(context),
+    "BurgerDataDesSpecial3".translateS(context),
+  ];
+  List DrinkDes = [
+    "drinksDes0".translateS(context),
+    "drinksDes1".translateS(context),
+    "drinksDes2".translateS(context),
+    "drinksDes3".translateS(context),
+  ];
   if (tabChecker(nameTab) == 1) {
     listPath = burgerDataPth;
-    listDes = burgerDataDes;
+    listDes = ListBurgerData;
   } else if (tabChecker(nameTab) == 2) {
     listPath = burgerDataPthSpecial;
-    listDes = burgerDataDesSpecial;
+    listDes = BurgerDataDesSpecial;
   } else {
     listPath = drinksPth;
-    listDes = drinksDes;
+    listDes = DrinkDes;
   }
   return Column(children: [
     Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [

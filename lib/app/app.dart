@@ -6,12 +6,24 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-class App extends StatelessWidget {
-  const App({super.key, required this.projectLang});
+String lang = 'en';
 
-  final String projectLang;
+class App extends StatefulWidget {
+  const App({super.key});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
+    void changeLang() {
+      setState(() {
+        lang = (lang == 'en') ? 'ar' : 'en';
+      });
+    }
+
     return GetMaterialApp(
       supportedLocales: const [Locale('en'), Locale('ar')],
       localizationsDelegates: const [
@@ -29,6 +41,7 @@ class App extends StatelessWidget {
         }
         return supportedLocales.first;
       },
+      locale: Locale(lang),
       initialRoute: BasicRoutes.welcome,
       theme: AppTheme.getLightTheme(),
       darkTheme: AppTheme.getDarkTheme(),
