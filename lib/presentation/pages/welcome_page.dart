@@ -1,13 +1,15 @@
+import 'package:burger_b_food/app/app.dart';
 import 'package:burger_b_food/app/app_localizations.dart';
 import 'package:burger_b_food/presentation/customs/custom_bottom_bar.dart';
 import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
 import 'package:burger_b_food/presentation/resources/routes_and_navigators.dart';
+import 'package:burger_b_food/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 class WelcomePage extends StatefulWidget {
-  const WelcomePage({super.key, required this.myFunction});
-  final void Function() myFunction;
+  const WelcomePage({super.key});
+
   @override
   State<WelcomePage> createState() => _WelcomePageState();
 }
@@ -62,7 +64,16 @@ class _WelcomePageState extends State<WelcomePage> {
                 Text("translatingMsg".translateS(context)),
                 const Gap(20),
                 IconButton(
-                    onPressed: widget.myFunction,
+                    onPressed: () {
+                      setState(() {
+                        if (checkCurrentLocale() == true) {
+                          myLocale = const Locale('ar');
+                        } else {
+                          myLocale = const Locale('en');
+                        }
+                        AppTheme.changeModeLanguage(myLocale);
+                      });
+                    },
                     hoverColor: Colors.deepOrange.shade400,
                     icon: const Icon(Icons.abc, size: 36))
               ],

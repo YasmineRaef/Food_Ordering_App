@@ -87,4 +87,6 @@ class AppTheme {
 
   static void changeThemeMode() => Get.changeThemeMode(themeMode =
       themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light);
+
+  static void changeModeLanguage(Locale myLocale) => Get.updateLocale(myLocale);
 }

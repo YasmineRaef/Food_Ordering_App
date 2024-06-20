@@ -7,10 +7,11 @@ class BasicRoutes {
   static String welcome = 'welcome';
   static String home = 'home';
   static String settings = 'settings';
+  static String material = 'material';
   static Map<String, Widget Function(BuildContext)> myRoutes = {
-    welcome: (context) => WelcomePage(myFunction: () {}),
+    welcome: (context) => WelcomePage(),
     home: (context) => const HomePage(),
-    settings: (context) => const FindNearLocationPage()
+    settings: (context) => const FindNearLocationPage(),
   };
 }
 
