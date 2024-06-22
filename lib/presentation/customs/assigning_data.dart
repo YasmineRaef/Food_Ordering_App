@@ -4,19 +4,20 @@ import 'package:burger_b_food/presentation/customs/list_of_details.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-int tabChecker(String tabName) {
-  if (tabName == 'POPULAR') {
-    return 1;
-  } else if (tabName == 'SPECIAL') {
-    return 2;
-  } else {
-    return 3;
-  }
-}
-
 Widget giveData(String nameTab, BuildContext context) {
   List listPath;
   List listDes;
+
+  int tabChecker(String tabName) {
+    if (tabName == "tabName0".translateS(context)) {
+      return 1;
+    } else if (tabName == "tabName1".translateS(context)) {
+      return 2;
+    } else {
+      return 3;
+    }
+  }
+
   List ListBurgerData = [
     "BurgerDataDes0".translateS(context),
     "BurgerDataDes1".translateS(context),
