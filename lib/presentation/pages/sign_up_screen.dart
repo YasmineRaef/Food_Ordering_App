@@ -1,6 +1,5 @@
 import 'package:burger_b_food/app/app_localizations.dart';
 import 'package:burger_b_food/presentation/customs/custom_widgets.dart';
-import 'package:burger_b_food/presentation/customs/list_of_details.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -31,7 +30,8 @@ class SignUpScreen extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.all(20),
                     child: TextField(
-                        decoration: InputDecoration(hintText: hintLabels[i]))),
+                        decoration: InputDecoration(
+                            hintText: "signUpField$i".translateS(context)))),
               Gap(contextHeight(context, 0.01)),
               TextButton(
                   onPressed: () {},

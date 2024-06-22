@@ -6,7 +6,7 @@ import 'package:burger_b_food/presentation/pages/sign_up_screen.dart';
 import 'package:burger_b_food/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 
-bool iconBool = false; //on toggle t or f mode changes ....
+bool iconBool = false;
 
 class CustomBottomBar extends StatefulWidget {
   const CustomBottomBar({super.key, required this.name});
@@ -48,19 +48,9 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
         ]),
         body: Center(child: _widgetOptions[_selectedIndex]),
         bottomNavigationBar: BottomNavigationBar(items: [
-          for (int i = 0; i < 3; i++)
+          for (int i = 0; i < bottomBarIcon.length; i++)
             BottomNavigationBarItem(
                 icon: bottomBarIcon[i], label: bottomBarLabel[i]),
         ], onTap: _onItemTapped, currentIndex: _selectedIndex));
-  }
-}
-
-bool checkThemeImage() {
-  if (iconBool == true) {
-    // case dark is chosen
-    return true;
-  } else {
-    // case light is chosen
-    return false;
   }
 }

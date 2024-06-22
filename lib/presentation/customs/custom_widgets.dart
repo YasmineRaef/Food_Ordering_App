@@ -20,7 +20,6 @@ class CustomCardsView extends StatelessWidget {
             width: contextWidth(context, 0.5),
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-                //theme manager adding....
                 color: AppTheme.themeMode == ThemeMode.dark
                     ? Colors.orange.shade700
                     : Colors.amber.shade300,
@@ -40,13 +39,12 @@ class CustomCardsView extends StatelessWidget {
               width: contextWidth(context, 0.1),
               child: FittedBox(
                 child: FloatingActionButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(
-                        context, BasicRoutes.welcome);
-                  },
-                  child: Icon(Icons.logout_outlined,
-                      size: contextWidth(context, 0.07)),
-                ),
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                          context, BasicRoutes.welcome);
+                    },
+                    child: Icon(Icons.logout_outlined,
+                        size: contextWidth(context, 0.07))),
               ),
             )
           ],
@@ -66,7 +64,6 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-            //theme manager adding....
             color: AppTheme.themeMode == ThemeMode.dark
                 ? const Color.fromARGB(225, 38, 50, 56)
                 : const Color.fromARGB(130, 238, 162, 48),

@@ -7,8 +7,9 @@
   "locationText": "Find our nearest branch",
   "locationBtn": "Search",
   "signUpTxt": "Sign-Up to be with us",
-  "signUpField1": "Name",
-  "signUpField2": "Telephone Number",
+  
+  "signUpField0": "Name",
+  "signUpField1": "Telephone Number",
   "signUpButton": "Sign-Up",
 
   "BurgerDataDes0": "BurgerB Classic: Two Beef burgers with melted cheese and onion rings 10$",
